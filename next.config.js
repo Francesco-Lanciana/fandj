@@ -44,6 +44,7 @@ module.exports = withTypescript(
 
             delete defaultPathMap['/article'];
             const routes = {
+                "/": { page: "/articles" },
                 ...defaultPathMap,
                 ...articleRoutes,
             }
