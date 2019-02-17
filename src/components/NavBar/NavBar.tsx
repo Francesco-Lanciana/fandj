@@ -17,7 +17,7 @@ const NavBar: React.FC<{}> = () => {
     return (
         <header className="navbar f-f-montserrat" data-show={isPinned}>
             <div className="navbar-content">
-                <div className="logo-container">Mosaic</div>
+                <div className="logo-container">F&amp;J</div>
                 <nav className="site-navigation-container">
                     <ul className="site-navigation-links">
                         <li className="site-navigation-link"><Link prefetch href="/articles"><a>Articles</a></Link></li>
