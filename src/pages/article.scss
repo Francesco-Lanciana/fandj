@@ -1,0 +1,32 @@
+@import "~@Styles/_variables.scss";
+
+.article-page {
+    display: grid;
+    grid-template-columns: 1fr [title-start] 1fr [main-start nav-start] repeat(13, 1fr) [main-end title-end nav-end] 1fr;
+    grid-template-rows: repeat(2, max-content) [nav-start] max-content [nav-end];
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        grid-template-columns: 1fr [title-start] 1fr [main-start] repeat(9, 1fr) [main-end title-end] 1fr [nav-start] 3fr [nav-end] 1fr;
+        grid-template-rows: [nav-start] repeat(2, max-content) [nav-end];
+    }
+
+    .article-title {
+        grid-column: title-start / title-end;
+        max-width: 78rem;
+    }
+
+    .article-content {
+        grid-column: main-start / main-end;
+    }
+
+    .article-nav {
+        grid-column: nav-start / nav-end;
+        grid-row: nav-start / nav-end ;
+
+        // @media screen and (min-width: $desktop-breakpoint) {
+        //     grid-row-start: 1;
+        //     grid-row-end: -1;
+        // }
+        //grid-row: 1 / -1;
+    }
+}
