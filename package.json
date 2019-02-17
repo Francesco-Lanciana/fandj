@@ -1,0 +1,39 @@
+{
+  "name": "fandj",
+  "version": "1.0.0",
+  "description": "A blog detailing the journey of Frankie and Joseph in their quest to start a startup",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build ./src",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "author": "Francesco Lanciana",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.14",
+    "@fortawesome/pro-light-svg-icons": "^5.7.1",
+    "@fortawesome/pro-regular-svg-icons": "^5.7.1",
+    "@fortawesome/pro-solid-svg-icons": "^5.7.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@zeit/next-sass": "^1.0.1",
+    "express": "^4.16.4",
+    "next": "^7.0.2",
+    "node-sass": "^4.11.0",
+    "prismic-javascript": "^2.0.1",
+    "prismic-reactjs": "^0.3.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
+  },
+  "devDependencies": {
+    "@types/next": "^7.0.9",
+    "@types/react": "^16.8.2",
+    "@types/react-dom": "^16.8.0",
+    "@zeit/next-typescript": "^1.1.1",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
