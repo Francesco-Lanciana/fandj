@@ -1,0 +1,24 @@
+@import "variables";
+
+// Computes the power of a number (for a given exponent)
+@function pow($number, $exponent) {
+    $value: 1;
+
+    @if $exponent > 0 {
+        @for $i from 1 through $exponent {
+            $value: $value * $number;
+        }
+    } @else if $exponent < 0 {
+        @for $i from 1 through -$exponent {
+            $value: $value / $number;
+        }
+    }
+
+    @return $value;
+};
+
+// This formula allows you to calculate any value in a given modular scale
+@function ms($value, $ms-ratio: $ratio, $ms-base: $base-fs) {
+    $size: pow($ms-ratio, $value) * $ms-base;
+    @return #{ $size + "rem"}
+};

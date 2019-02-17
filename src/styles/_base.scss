@@ -1,0 +1,45 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    font-size: #{$base-fs * 100 + '%'};
+    color: #333;
+    font-family: 'Crimson Text', serif;
+    overflow-y: scroll;
+}
+
+
+// (font-size, line-height, margin-top, margin-bottom)
+$heading: (
+    h1: (3, 3, 2, 1),
+    h2: (1, 1.5, 2, 1),
+    h3: (1, 1, 1, 0),
+    h4: (0, 1, 1, 0),
+    h5: (-1, 1, 1, 0),
+    h6: (-2, 1, 1, 0)
+);
+
+@each $heading, $properties in $heading {
+    #{$heading} {
+        font-family: 'Montserrat', sans-serif;
+        font-size: ms(nth($properties, 1));
+        @include line-height(nth($properties, 2));
+        @include margin-top(nth($properties, 3));
+        @include margin-bottom(nth($properties, 4));
+    }
+};
+
+p {
+    max-width: 33em;
+}
+
+p, h2, h3, h4, h5, h6, ul, ol {
+    max-width: 32rem;
+}
