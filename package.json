@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build ./src",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "export": "npm run build && next export ./src"
   },
   "author": "Francesco Lanciana",
   "license": "ISC",

@@ -1,6 +1,6 @@
-export const PRISMIC_API_URL = "https://mosaic.cdn.prismic.io/api/v2";
+const PRISMIC_API_URL = "https://mosaic.cdn.prismic.io/api/v2";
 
-export const DEFAULT_SEO = {
+const DEFAULT_SEO = {
     title: "F&J",
     description: "A blog detailing every detail on our journey to make a startup",
     openGraph: {
@@ -20,3 +20,5 @@ export const DEFAULT_SEO = {
         cardType: "summary_large_image",
     },
 };
+
+module.exports = { PRISMIC_API_URL, DEFAULT_SEO };
