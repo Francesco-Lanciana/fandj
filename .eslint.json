@@ -1,0 +1,98 @@
+{
+    "parser": "babel-eslint",
+    "plugins": ["react", "jsx-a11y", "import"],
+    "extends": ["airbnb"],
+    "env": {
+        "browser": true,
+        "jest": true
+    },
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+    },
+    "globals": {
+        "director": true
+    },
+    "rules": {
+        "eol-last": 0,
+        "camelcase": "error",
+        "max-len": [
+            "error",
+            {
+                "code": 107,
+                "ignorePattern": "^import |^export {(.*?)}|class [a-zA-Z]+ implements |//",
+                "ignoreComments": true,
+                "ignoreStrings": true,
+                "ignoreUrls": true,
+                "ignoreRegExpLiterals": true
+            }
+        ],
+        "indent": ["error", 4],
+        "sort-imports": 0,
+        "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
+        "linebreak-style": 0,
+        "quotes": "off",
+        "import/no-extraneous-dependencies": 0,
+        "react/jsx-indent": ["error", 4],
+        "import/no-unresolved": 0,
+        "comma-dangle": [
+            "error",
+            {
+                "functions": "never",
+                "objects": "always-multiline",
+                "arrays": "always-multiline",
+                "imports": "always-multiline"
+            }
+        ],
+        "import/prefer-default-export": 0,
+        "react/jsx-no-undef": 0,
+        "react/require-default-props": 0,
+        "import/order": 0,
+        "object-curly-newline": [
+            "error",
+            {
+                "ObjectExpression": { "consistent": true },
+                "ObjectPattern": { "multiline": true },
+                "ImportDeclaration": { "consistent": true },
+                "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+            }
+        ],
+        "arrow-parens": ["error", "always"],
+        "class-methods-use-this": 0,
+        "no-shadow": 0,
+        "react/jsx-max-props-per-line": 0,
+        "react/jsx-first-prop-new-line": 0,
+        "react/jsx-closing-bracket-location": [1, { "selfClosing": "tag-aligned" }],
+        "react/jsx-indent-props": [1, 4],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/react-in-jsx-scope": "off",
+        "no-plusplus": "off",
+        "implicit-arrow-linebreak": "off",
+        "react/sort-comp": [
+            1,
+            {
+                "order": ["static-methods", "lifecycle", "everything-else", "rendering"],
+                "groups": {
+                    "rendering": ["/^render.+$/", "render"]
+                }
+            }
+        ],
+        "radix": "off",
+        "arrow-body-style": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "function-paren-newline": "off",
+        "no-trailing-spaces": ["error", { "skipBlankLines": true, "ignoreComments": true }],
+        "no-multi-str": "off",
+        "operator-linebreak": "off",
+        "jsx-a11y/label-has-associated-control": [
+            "error",
+            {
+                "assert": "either"
+            }
+        ],
+        "jsx-a11y/label-has-for": "off",
+        "operator-assignment": "off",
+        "no-prototype-builtins": "off",
+        "quote-props": ["error", "consistent-as-needed"]
+    }
+}
