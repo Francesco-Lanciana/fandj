@@ -24,7 +24,8 @@ export default class CustomApp extends App {
             <Head>
                 <title key="title">{DEFAULT_SEO.title}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="google-site-verification" content="62JDm4DbcxBCsrQ1H1ntfsPsxQiJLjDuST4XbnBf8F4" />                <meta key="description" name="description" content={DEFAULT_SEO.description} />
+                <meta name="google-site-verification" content="62JDm4DbcxBCsrQ1H1ntfsPsxQiJLjDuST4XbnBf8F4" />
+                <meta key="description" name="description" content={DEFAULT_SEO.description} />
                 <meta key="twitter:card" name="twitter:card" content={DEFAULT_SEO.twitter.cardType} />
                 <meta key="twitter:site" name="twitter:site" content={DEFAULT_SEO.twitter.handle} />
                 <meta key="og:url" property="og:url" content={DEFAULT_SEO.openGraph.url} />
