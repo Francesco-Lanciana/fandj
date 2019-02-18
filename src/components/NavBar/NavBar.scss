@@ -1,3 +1,5 @@
+@import "~@Styles/_variables.scss";
+
 $nav-height: 55px;
 
 .navbar {
@@ -68,5 +70,15 @@ $nav-height: 55px;
 
     .site-navigation-link + .site-navigation-link {
         margin-left: 40px;
+    }
+
+    @media screen and (max-width: $phablet-breakpoint) {
+        .site-navigation-link + .site-navigation-link {
+            margin-left: 25px;
+        }
+        
+        .navbar-content {
+            padding: 15px 25px;
+        }
     }
 }

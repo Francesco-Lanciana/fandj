@@ -23,6 +23,7 @@ export default class CustomApp extends App {
         <Container>
             <Head>
                 <title key="title">{DEFAULT_SEO.title}</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta key="description" name="description" content={DEFAULT_SEO.description} />
                 <meta key="twitter:card" name="twitter:card" content={DEFAULT_SEO.twitter.cardType} />
                 <meta key="twitter:site" name="twitter:site" content={DEFAULT_SEO.twitter.handle} />

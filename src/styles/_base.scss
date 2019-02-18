@@ -13,8 +13,11 @@ html {
     color: #333;
     font-family: 'Crimson Text', serif;
     overflow-y: scroll;
-}
 
+    @media screen and (max-width: $phablet-breakpoint) {
+        font-size: #{$mobile-fs * 100 + '%'};
+    }
+}
 
 // (font-size, line-height, margin-top, margin-bottom)
 $heading: (
