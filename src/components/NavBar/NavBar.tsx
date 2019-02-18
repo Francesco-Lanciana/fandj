@@ -22,7 +22,7 @@ const NavBar: React.FC<{}> = () => {
                     <ul className="site-navigation-links">
                         <li className="site-navigation-link"><Link prefetch href="/articles"><a>Articles</a></Link></li>
                         <li className="site-navigation-link"><Link prefetch href="/experiments"><a>Experiments</a></Link></li>
-                        <li className="site-navigation-link"><Link prefetch href="/about"><a>Who we are</a></Link></li>
+                        <li className="site-navigation-link"><Link prefetch href="/about"><a>About</a></Link></li>
                     </ul>
                 </nav>
             </div>
