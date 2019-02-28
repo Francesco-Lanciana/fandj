@@ -81,7 +81,7 @@ const ArticlePage: NextFC<IndexPageProps> = ({ post }) => {
     }
 
     return (
-        <DefaultLayout>
+        <>
             <Head>
                 <title key="title">{articleSeoMetaData.title}</title>
                 <meta key="description" name="description" content={articleSeoMetaData.description} />
@@ -92,11 +92,10 @@ const ArticlePage: NextFC<IndexPageProps> = ({ post }) => {
                 <meta key="og:image" property="og:image" content={articleSeoMetaData.imageUrl} />
             </Head>
             <article className="article-page">
-                <h1 className="article-title">{title.length ? title[0].text : ""}</h1>
-
-                <main className="article-content">
-                    {RichText.render(body, linkResolver)}
-                </main>
+                <div className="article-content">
+                    <h1 className="article-title">{title.length ? title[0].text : ""}</h1>
+                    <main className="article-body">{RichText.render(body, linkResolver)}</main>
+                </div>
 
                 <div className="quick-links-container">
                     <QuickLinks>
@@ -105,7 +104,7 @@ const ArticlePage: NextFC<IndexPageProps> = ({ post }) => {
                 </div>
             </article>
             <script type="application/ld+json" dangerouslySetInnerHTML={addJSONLD(articleSeoMetaData)} />
-        </DefaultLayout>
+        </>
     );
 };
 

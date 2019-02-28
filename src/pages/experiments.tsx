@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { NextFC } from "next";
-import DefaultLayout from "@Layouts/DefaultLayout/DefaultLayout";
 import { getArticles } from "@Modules/blogApi";
 import { linkResolver } from "@Modules/blogHelpers";
 import { Document } from "@Types/prismic-javascript";
@@ -11,13 +10,13 @@ interface ExperimentPageProps {
 }
 
 const Experiments: NextFC<ExperimentPageProps> = ({ posts }) => (
-    <DefaultLayout>
+    <>
         <h1>Experiments</h1>
 
         <div className="experiment">
             <h2>Our experiments</h2>
         </div>
-    </DefaultLayout>
+    </>
 );
 
 Experiments.getInitialProps = async (a) => {

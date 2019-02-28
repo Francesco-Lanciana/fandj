@@ -1,7 +1,7 @@
 import React from "react";
 import App, { Container } from "next/app";
 import Head from "next/head";
-import { NextFC } from "next";
+import DefaultLayout from "@Layouts/DefaultLayout/DefaultLayout";
 
 import { DEFAULT_SEO } from "../config";
 
@@ -49,7 +49,9 @@ export default class CustomApp extends App {
                 />
                 <meta key="og:locale" property="og:locale" content={DEFAULT_SEO.openGraph.locale} />
             </Head>
-            <Component {...pageProps} />
+            <DefaultLayout>
+                <Component {...pageProps} />
+            </DefaultLayout>
         </Container>
       );
     }
