@@ -2,6 +2,15 @@
 @import "functions";
 @import "mixins";
 
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local("-apple-system"), local("BlinkMacSystemFont"), local("Segoe UI"), local("Roboto"), local("Oxygen-Sans"), local("Ubuntu"), local("Cantarell"), local("Helvetica Neue"), local("sans-serif");
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -11,7 +20,7 @@ body, html {
 html {
     font-size: #{$base-fs * 100 + '%'};
     color: #333;
-    font-family: 'Crimson Text', serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     overflow-y: scroll;
 
     @media screen and (max-width: $phablet-breakpoint) {
@@ -21,7 +30,7 @@ html {
 
 // (font-size, line-height, margin-top, margin-bottom)
 $heading: (
-    h1: (3, 3, 2, 1),
+    h1: (3, 2.25, 2, 1),
     h2: (1, 1.5, 2, 1),
     h3: (1, 1, 1, 0),
     h4: (0, 1, 1, 0),
@@ -31,7 +40,7 @@ $heading: (
 
 @each $heading, $properties in $heading {
     #{$heading} {
-        font-family: 'Montserrat', sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-size: ms(nth($properties, 1));
         @include line-height(nth($properties, 2));
         @include margin-top(nth($properties, 3));
@@ -39,10 +48,18 @@ $heading: (
     }
 };
 
-p {
-    max-width: 33em;
+h1 {
+    font-weight: 800;
+}
+
+h2, h3 {
+    font-weight: 700;
+}
+
+h4, h5, h6 {
+    font-weight: 600;
 }
 
 p, h2, h3, h4, h5, h6, ul, ol {
-    max-width: 32rem;
+    max-width: 40rem;
 }
