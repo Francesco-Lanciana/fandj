@@ -5,7 +5,6 @@ $nav-height: 55px;
 .navbar {
     box-shadow: 0 5px 10px 0 rgba(0,0,0,.05);
     background: rgba(255,255,255,.97);
-    font-weight: bold;
     position: fixed;
     top: 0;
     right: 0;
@@ -33,6 +32,7 @@ $nav-height: 55px;
         flex: 1 1 auto;
         font-size: 1.5em;
         cursor: pointer;
+        font-weight: bold;
         height: 100%;
     }
 
@@ -58,18 +58,36 @@ $nav-height: 55px;
             position: relative;
         }
 
+        & a::after {
+            content: '';
+            height: 50px;
+            width: 100%;
+            left: 0;
+            position: absolute;
+            top: -15px;
+        }
+
         & a::before {
             content: '';
-            height: 40px;
-            width: 100%;
+            height: 35px;
+            width: calc(100% + 10px);
             position: absolute;
             top: -10px;
+            left: -5px;
+            border-bottom: 1px solid blue;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
 
+        & a[data-active="true"]::before {
+            visibility: visible;
+            opacity: 1;
         }
     }
 
     .site-navigation-link + .site-navigation-link {
-        margin-left: 40px;
+        margin-left: 50px;
     }
 
     @media screen and (max-width: $phablet-breakpoint) {
