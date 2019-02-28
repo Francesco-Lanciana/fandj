@@ -1,32 +1,36 @@
 @import "~@Styles/_variables.scss";
+@import "~@Styles/_mixins.scss";
+
+$content-margin: 6.25%;
 
 .article-page {
-    display: grid;
-    grid-template-columns: 1fr [title-start] 1fr [main-start nav-start] repeat(13, 1fr) [main-end title-end nav-end] 1fr;
-    grid-template-rows: repeat(2, max-content) [nav-start] max-content [nav-end];
+    display: flex;
+    flex-direction: column;
 
     @media screen and (min-width: $desktop-breakpoint) {
-        grid-template-columns: 1fr [title-start] 1fr [main-start] repeat(9, 1fr) [main-end title-end] 1fr [nav-start] 3fr [nav-end] 1fr;
-        grid-template-rows: [nav-start] repeat(2, max-content) [nav-end];
+        flex-direction: row;
     }
 
-    .article-title {
-        grid-column: title-start / title-end;
-        max-width: 78rem;
+    > * {
+        margin: 0 ($content-margin / 2);
     }
 
     .article-content {
-        grid-column: main-start / main-end;
+        margin-left: $content-margin;
+        flex: 10 10 0;
     }
 
-    .article-nav {
-        grid-column: nav-start / nav-end;
-        grid-row: nav-start / nav-end ;
+    .article-title {
+        max-width: 52rem;
+    }
 
-        // @media screen and (min-width: $desktop-breakpoint) {
-        //     grid-row-start: 1;
-        //     grid-row-end: -1;
-        // }
-        //grid-row: 1 / -1;
+    .article-body {
+        margin-left: 8%;
+    }
+
+    .quick-links-container {
+        flex: 3 3 auto;
+        margin-right: $content-margin;
+        @include margin-top(2);
     }
 }
